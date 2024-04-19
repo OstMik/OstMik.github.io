@@ -4,7 +4,10 @@
     margin: 0;
     padding: 0;
 }
-
+/* Center text */
+body {
+  text-align: center;
+}
 /* Set default font, line-height, and word-wrap for the html element */
 html {
     overflow-y: scroll;
