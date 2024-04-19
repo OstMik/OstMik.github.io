@@ -1,20 +1,16 @@
-/* Set default box-sizing and remove default margins and paddings */
+   /* Set default box-sizing and remove default margins and paddings */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-/* Center text */
-body {
-  text-align: center;
-}
+
 /* Set default font, line-height, and word-wrap for the html element */
 html {
     overflow-y: scroll;
     height: 100%;
     font: 100%/1.5 sans-serif;
     word-wrap: break-word;
-    margin: 0 auto;
     padding: 1.5em;
 }
 
@@ -51,28 +47,6 @@ p code {
     background-color: #eee;
     padding: 0.05em 0.2em;
     border: 1px solid #ccc;
-}
-
-/* Set styles for ordered and unordered lists */
-ol, ul {
-    margin: 1em;
-}
-ol li ol, ol li ul, ul li ol, ul li ul {
-    margin: 0 2em;
-}
-ol li p, ul li p {
-    margin: 0;
-}
-
-/* Set styles for definition lists */
-dl {
-    font-family: monospace, monospace;
-}
-dl dt {
-    font-weight: bold;
-}
-dl dd {
-    margin: -1em 0 1em 1em;
 }
 
 /* Set styles for images */
@@ -200,22 +174,33 @@ header a + a {
 
 /* Set styles for blog post list */
 .posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 0;
     list-style: none;
 }
-.posts .post a {
-    display: flex;
-    padding: 0.5em 0;
-    color: black;
-}
-.posts .post a:hover, .posts .post a:focus, .posts .post a:active {
+.posts .post {
+    flex: 0 0 30%;
+    margin: 1em;
+    text-align: center;
     text-decoration: none;
-    background: rgba(200, 200, 200, 0.2);
+    color: #333;
 }
-.posts .post date {
-    font-family: monospace, monospace;
-    font-size: 0.8rem;
-    vertical-align: middle;
-    padding-right: 2rem;
-    color: grey;
+.posts .post img {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    max-height: 150px;
+    margin-bottom: 10px;
 }
+.posts .post h2 {
+    margin: 0.5em 0 0.25em;
+    font-size: 1.25em;
+}
+.posts .post p {
+    margin: 0;
+    font-size: 0.875em;
+    line-height: 1.5;
+}
+                                   
